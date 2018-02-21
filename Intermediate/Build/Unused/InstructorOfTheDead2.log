@@ -1,0 +1,9 @@
+﻿  Compiling game modules for hot reload
+  Performing 3 actions (4 in parallel)
+  MainCharacter.cpp
+  [2/3] Link UE4Editor-InstructorOfTheDead2-8681.dll
+  [3/3] Link UE4Editor-InstructorOfTheDead2-8681.lib
+     Creating library E:\CSCI 152\InstructorOfTheDead2\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InstructorOfTheDead2-8681.lib and object E:\CSCI 152\InstructorOfTheDead2\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InstructorOfTheDead2-8681.exp
+     Creating library E:\CSCI 152\InstructorOfTheDead2\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InstructorOfTheDead2-8681.suppressed.lib and object E:\CSCI 152\InstructorOfTheDead2\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InstructorOfTheDead2-8681.suppressed.exp
+  Deploying InstructorOfTheDead2Editor Win64 Development...
+  Total build time: 9.40 seconds (Local executor: 2.56 seconds)

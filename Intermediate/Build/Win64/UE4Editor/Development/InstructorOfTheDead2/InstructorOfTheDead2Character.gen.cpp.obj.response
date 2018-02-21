@@ -23,9 +23,10 @@
 /wd4838
 /w44668
 /I "C:\Program Files\Epic Games\UE_4.17\Engine\Source"
-/I "C:\Users\harka\Documents\Unreal Projects\InstructorOfTheDead2\Source"
-/I "C:\Users\harka\Documents\Unreal Projects\InstructorOfTheDead2\Intermediate\Build\Win64\UE4Editor\Inc\InstructorOfTheDead2"
-/I "C:\Users\harka\Documents\Unreal Projects\InstructorOfTheDead2\Source\InstructorOfTheDead2"
+/I "E:\CSCI 152\InstructorOfTheDead2\Source"
+/I "E:\CSCI 152\InstructorOfTheDead2\Source\InstructorOfTheDead2\Public"
+/I "E:\CSCI 152\InstructorOfTheDead2\Intermediate\Build\Win64\UE4Editor\Inc\InstructorOfTheDead2"
+/I "E:\CSCI 152\InstructorOfTheDead2\Source\InstructorOfTheDead2"
 /I "C:\Program Files\Epic Games\UE_4.17\Engine\Source\Runtime\Core\Public"
 /I "C:\Program Files\Epic Games\UE_4.17\Engine\Source\Runtime\Core\Public\Internationalization"
 /I "C:\Program Files\Epic Games\UE_4.17\Engine\Source\Runtime\Core\Public\Async"
@@ -355,9 +356,9 @@
 /FI"C:\Program Files\Epic Games\UE_4.17\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Yu"C:\Program Files\Epic Games\UE_4.17\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Fp"C:\Program Files\Epic Games\UE_4.17\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.pch"
-"C:\Users\harka\Documents\Unreal Projects\InstructorOfTheDead2\Intermediate\Build\Win64\UE4Editor\Inc\InstructorOfTheDead2\InstructorOfTheDead2Character.gen.cpp"
-/FI"C:\Users\harka\Documents\Unreal Projects\InstructorOfTheDead2\Intermediate\Build\Win64\UE4Editor\Development\InstructorOfTheDead2\Definitions.InstructorOfTheDead2.h"
-/Fo"C:\Users\harka\Documents\Unreal Projects\InstructorOfTheDead2\Intermediate\Build\Win64\UE4Editor\Development\InstructorOfTheDead2\InstructorOfTheDead2Character.gen.cpp.obj"
+"E:\CSCI 152\InstructorOfTheDead2\Intermediate\Build\Win64\UE4Editor\Inc\InstructorOfTheDead2\InstructorOfTheDead2Character.gen.cpp"
+/FI"E:\CSCI 152\InstructorOfTheDead2\Intermediate\Build\Win64\UE4Editor\Development\InstructorOfTheDead2\Definitions.InstructorOfTheDead2.h"
+/Fo"E:\CSCI 152\InstructorOfTheDead2\Intermediate\Build\Win64\UE4Editor\Development\InstructorOfTheDead2\InstructorOfTheDead2Character.gen.cpp.obj"
 /TP
 /GR-
 /W4
