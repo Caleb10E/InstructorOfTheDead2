@@ -77,6 +77,17 @@ void AInstructorOfTheDead2Character::SetupPlayerInputComponent(class UInputCompo
 }
 
 
+//FVector AInstructorOfTheDead2Character::GetPawnViewLocation() const
+//{
+//	if (FollowCamera)
+//	{
+//		return FollowCamera->GetComponentLocation();
+//	}
+//
+//	return Super::GetPawnViewLocation();
+//	
+//}
+
 void AInstructorOfTheDead2Character::OnResetVR()
 {
 	UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition();

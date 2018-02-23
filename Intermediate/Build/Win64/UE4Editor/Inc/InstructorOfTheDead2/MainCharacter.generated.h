@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define INSTRUCTOROFTHEDEAD2_MainCharacter_generated_h
 
-#define InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_RPC_WRAPPERS
-#define InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS
-#define InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_INCLASS_NO_PURE_DECLS \
+#define Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_RPC_WRAPPERS
+#define Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMainCharacter(); \
 	friend INSTRUCTOROFTHEDEAD2_API class UClass* Z_Construct_UClass_AMainCharacter(); \
@@ -25,7 +25,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_INCLASS \
+#define Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_INCLASS \
 private: \
 	static void StaticRegisterNativesAMainCharacter(); \
 	friend INSTRUCTOROFTHEDEAD2_API class UClass* Z_Construct_UClass_AMainCharacter(); \
@@ -35,7 +35,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_STANDARD_CONSTRUCTORS \
+#define Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AMainCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMainCharacter) \
@@ -48,7 +48,7 @@ private: \
 public:
 
 
-#define InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_ENHANCED_CONSTRUCTORS \
+#define Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AMainCharacter(AMainCharacter&&); \
@@ -59,32 +59,32 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMainCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AMainCharacter)
 
 
-#define InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_PRIVATE_PROPERTY_OFFSET
-#define InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_9_PROLOG
-#define InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_GENERATED_BODY_LEGACY \
+#define Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_PRIVATE_PROPERTY_OFFSET
+#define Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_9_PROLOG
+#define Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
-	InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_RPC_WRAPPERS \
-	InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_INCLASS \
-	InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_STANDARD_CONSTRUCTORS \
+	Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
+	Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_RPC_WRAPPERS \
+	Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_INCLASS \
+	Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_GENERATED_BODY \
+#define Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
-	InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_INCLASS_NO_PURE_DECLS \
-	InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_ENHANCED_CONSTRUCTORS \
+	Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
+	Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_INCLASS_NO_PURE_DECLS \
+	Project_Source_InstructorOfTheDead2_Public_MainCharacter_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID InstructorOfTheDead2_Source_InstructorOfTheDead2_Public_MainCharacter_h
+#define CURRENT_FILE_ID Project_Source_InstructorOfTheDead2_Public_MainCharacter_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

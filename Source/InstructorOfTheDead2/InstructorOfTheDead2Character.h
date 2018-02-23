@@ -29,6 +29,8 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	//virtual FVector GetPawnViewLocation() const override;
+
 protected:
 
 	/** Resets HMD orientation in VR. */
