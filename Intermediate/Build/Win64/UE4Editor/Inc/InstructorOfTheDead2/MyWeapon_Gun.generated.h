@@ -13,7 +13,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define INSTRUCTOROFTHEDEAD2_MyWeapon_Gun_generated_h
 
-#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_RPC_WRAPPERS \
+#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execFire) \
 	{ \
@@ -24,7 +24,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execFire) \
 	{ \
@@ -35,7 +35,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_INCLASS_NO_PURE_DECLS \
+#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyWeapon_Gun(); \
 	friend INSTRUCTOROFTHEDEAD2_API class UClass* Z_Construct_UClass_AMyWeapon_Gun(); \
@@ -45,7 +45,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_INCLASS \
+#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesAMyWeapon_Gun(); \
 	friend INSTRUCTOROFTHEDEAD2_API class UClass* Z_Construct_UClass_AMyWeapon_Gun(); \
@@ -55,7 +55,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_STANDARD_CONSTRUCTORS \
+#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AMyWeapon_Gun(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AMyWeapon_Gun) \
@@ -68,7 +68,7 @@ private: \
 public:
 
 
-#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_ENHANCED_CONSTRUCTORS \
+#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AMyWeapon_Gun(AMyWeapon_Gun&&); \
@@ -79,30 +79,35 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AMyWeapon_Gun); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AMyWeapon_Gun)
 
 
-#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_PRIVATE_PROPERTY_OFFSET \
+#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__MeshComp() { return STRUCT_OFFSET(AMyWeapon_Gun, MeshComp); } \
-	FORCEINLINE static uint32 __PPO__DamageType() { return STRUCT_OFFSET(AMyWeapon_Gun, DamageType); }
+	FORCEINLINE static uint32 __PPO__DamageType() { return STRUCT_OFFSET(AMyWeapon_Gun, DamageType); } \
+	FORCEINLINE static uint32 __PPO__MuzzleSocketName() { return STRUCT_OFFSET(AMyWeapon_Gun, MuzzleSocketName); } \
+	FORCEINLINE static uint32 __PPO__TracerTargetName() { return STRUCT_OFFSET(AMyWeapon_Gun, TracerTargetName); } \
+	FORCEINLINE static uint32 __PPO__MuzzleEffect() { return STRUCT_OFFSET(AMyWeapon_Gun, MuzzleEffect); } \
+	FORCEINLINE static uint32 __PPO__ImpactEffect() { return STRUCT_OFFSET(AMyWeapon_Gun, ImpactEffect); } \
+	FORCEINLINE static uint32 __PPO__TracerEffect() { return STRUCT_OFFSET(AMyWeapon_Gun, TracerEffect); }
 
 
-#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_12_PROLOG
-#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_GENERATED_BODY_LEGACY \
+#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_13_PROLOG
+#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_PRIVATE_PROPERTY_OFFSET \
-	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_RPC_WRAPPERS \
-	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_INCLASS \
-	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_STANDARD_CONSTRUCTORS \
+	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_PRIVATE_PROPERTY_OFFSET \
+	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_RPC_WRAPPERS \
+	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_INCLASS \
+	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_GENERATED_BODY \
+#define Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_PRIVATE_PROPERTY_OFFSET \
-	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_INCLASS_NO_PURE_DECLS \
-	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_15_ENHANCED_CONSTRUCTORS \
+	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_PRIVATE_PROPERTY_OFFSET \
+	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_INCLASS_NO_PURE_DECLS \
+	Project_Source_InstructorOfTheDead2_MyWeapon_Gun_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
