@@ -77,16 +77,16 @@ void AInstructorOfTheDead2Character::SetupPlayerInputComponent(class UInputCompo
 }
 
 
-FVector AInstructorOfTheDead2Character::GetPawnViewLocation() const
-{
-	if (CameraBoom)
-{
-	return CameraBoom->GetComponentLocation();
-	}
-
-	return Super::GetPawnViewLocation();
-	
-}
+//FVector AInstructorOfTheDead2Character::GetPawnViewLocation() const
+//{
+//	if (FollowCamera)
+//	{
+//		return FollowCamera->GetComponentLocation();
+//	}
+//
+//	return Super::GetPawnViewLocation();
+//	
+//}
 
 void AInstructorOfTheDead2Character::OnResetVR()
 {

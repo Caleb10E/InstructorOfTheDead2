@@ -29,7 +29,7 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
-	virtual FVector GetPawnViewLocation() const override;
+	//virtual FVector GetPawnViewLocation() const override;
 
 protected:
 
