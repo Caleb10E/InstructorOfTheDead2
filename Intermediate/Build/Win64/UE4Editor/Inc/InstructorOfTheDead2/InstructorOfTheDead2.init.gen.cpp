@@ -20,8 +20,8 @@ void EmptyLinkFunctionForGeneratedCodeInstructorOfTheDead2_init() {}
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), nullptr, FName(TEXT("/Script/InstructorOfTheDead2")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x6EBC720A;
-			Guid.B = 0x778E8093;
+			Guid.A = 0x330FA15C;
+			Guid.B = 0xA0DEF906;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

@@ -19,7 +19,7 @@ AMyWeapon_Gun::AMyWeapon_Gun()
 
 	MuzzleSocketName = "MuzzleSocket";
 
-	TracerTargetName = "Traget";
+	TracerTargetName = "Target";
 
 }
 
@@ -44,7 +44,7 @@ void AMyWeapon_Gun::Fire()
 
 		FVector ShortDirection = EyeRotation.Vector();
 
-		FVector TraceEnd = EyeLocation * (ShortDirection * 10000);
+		FVector TraceEnd = EyeLocation + (ShortDirection * 10000);
 
 		FCollisionQueryParams QueryParams;
 		QueryParams.AddIgnoredActor(MyOwner);
