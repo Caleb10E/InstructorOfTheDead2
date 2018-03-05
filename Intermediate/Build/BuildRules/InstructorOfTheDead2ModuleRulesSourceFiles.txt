@@ -1,3 +1,0 @@
-E:\CSCI 152\Project\Source\InstructorOfTheDead2\InstructorOfTheDead2.Build.cs
-E:\CSCI 152\Project\Source\InstructorOfTheDead2.Target.cs
-E:\CSCI 152\Project\Source\InstructorOfTheDead2Editor.Target.cs
