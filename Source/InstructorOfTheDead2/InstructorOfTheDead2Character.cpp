@@ -1,7 +1,7 @@
 // Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
 
 #include "InstructorOfTheDead2Character.h"
-#include "HeadMountedDisplayFunctionLibrary.h"
+//#include "HeadMountedDisplayFunctionLibrary.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
@@ -73,7 +73,7 @@ void AInstructorOfTheDead2Character::SetupPlayerInputComponent(class UInputCompo
 	PlayerInputComponent->BindTouch(IE_Released, this, &AInstructorOfTheDead2Character::TouchStopped);
 
 	// VR headset functionality
-	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &AInstructorOfTheDead2Character::OnResetVR);
+	//PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &AInstructorOfTheDead2Character::OnResetVR);
 }
 
 
@@ -88,10 +88,11 @@ FVector AInstructorOfTheDead2Character::GetPawnViewLocation() const
 	
 }
 
+/*
 void AInstructorOfTheDead2Character::OnResetVR()
 {
 	UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition();
-}
+}*/
 
 void AInstructorOfTheDead2Character::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 {

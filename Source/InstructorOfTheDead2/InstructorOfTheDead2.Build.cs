@@ -26,5 +26,7 @@ public class InstructorOfTheDead2 : ModuleRules
         });
         
         DynamicallyLoadedModuleNames.Add("OnlineSubsystemSteam");
+
+        PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
     }
 }
