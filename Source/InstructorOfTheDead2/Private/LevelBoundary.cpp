@@ -4,6 +4,7 @@
 #include "LevelBoundary.h"
 // include draw debug helpers header file
 #include "DrawDebugHelpers.h"
+#include "InstructorOfTheDead2/Public/MainCharacter.h"
 
 ALevelBoundary::ALevelBoundary()
 {
@@ -27,6 +28,9 @@ void ALevelBoundary::OnOverlapBegin(class AActor* OverlappedActor, class AActor*
 		// print to screen using above defined method when actor enters trigger volume
 		print("Overlap Begin");
 		printFString("Other Actor = %s", *OtherActor->GetName());
+		//OtherActor->TakeDamage(1, FDamageEvent(), OverlappedActor->GetInstigatorController(), OverlappedActor);
+		//OtherActor->HitBoundary();
+		OtherActor->SetActorLocation(Respawn);
 	}
 }
 

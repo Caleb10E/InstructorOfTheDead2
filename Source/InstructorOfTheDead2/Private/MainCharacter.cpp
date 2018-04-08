@@ -1,8 +1,12 @@
 // Fill out your copyright notice in the Description page of Project Settings.
+#define print(text) if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 1.5, FColor::Green,text)
+#define printFString(text, fstring) if (GEngine) GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT(text), fstring))
 
 #include "MainCharacter.h"
 #include "../Public/MainCharacter.h"
 #include "GameFramework/PawnMovementComponent.h"
+#include "InstructorOfTheDead2/InstructorOfTheDead2GameMode.h"
+#include "DrawDebugHelpers.h"
 
 
 // Sets default values
@@ -47,5 +51,13 @@ void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	PlayerInputComponent->BindAxis("MoveForward", this, &AMainCharacter::MoveForward);
 
 	PlayerInputComponent->BindAxis("MoveRight", this, &AMainCharacter::MoveRight);
+}
+
+void AMainCharacter::HitBoundary()
+{
+	print("Overlap Begin");
+	auto newPC = GetWorld()->GetFirstPlayerController();
+	//this->Destroy();
+	GetWorld()->GetAuthGameMode<AInstructorOfTheDead2GameMode>()->RestartPlayer(newPC);
 }
 
