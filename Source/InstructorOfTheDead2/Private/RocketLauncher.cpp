@@ -4,9 +4,18 @@
 
 void ARocketLauncher::Fire()
 {
+
+	if (Role < ROLE_Authority)
+	{
+		ServerFire();
+	}
+
+
 	AActor* MyOwner = GetOwner();
 	if (MyOwner && RocketLauncherClass)
 	{
+		
+
 		FVector EyeLocation;
 		FRotator EyeRotation;
 		MyOwner->GetActorEyesViewPoint(EyeLocation, EyeRotation);
@@ -19,4 +28,14 @@ void ARocketLauncher::Fire()
 
 		GetWorld()->SpawnActor<AActor>(RocketLauncherClass, MuzzleLocation, EyeRotation, SpawnParams);
 	}
+}
+
+void ARocketLauncher::ServerFire_Implementation()
+{
+	Fire();
+}
+
+bool ARocketLauncher::ServerFire_Validate()
+{
+	return true;
 }

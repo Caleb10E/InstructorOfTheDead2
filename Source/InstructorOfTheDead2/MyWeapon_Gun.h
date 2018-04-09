@@ -26,8 +26,7 @@ protected:
 	UPROPERTY(visibleAnywhere,BlueprintReadOnly,Category ="Components")
 	USkeletalMeshComponent * MeshComp;
 
-	UFUNCTION(BlueprintCallable,Category= "Weapon")
-	virtual void Fire();
+
 	
 	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly,Category = "Weapon")
 	TSubclassOf<UDamageType> DamageType;
@@ -51,6 +50,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		virtual void Fire();
 	
 };
