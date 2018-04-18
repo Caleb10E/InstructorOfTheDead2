@@ -7,6 +7,7 @@
 #include "../Public/MainCharacter.h"
 #include "GameFramework/PawnMovementComponent.h"
 #include "RocketLauncher.h"
+#include "MyWeapon_Gun.h"
 #include "Net/UnrealNetwork.h"
 
 
@@ -45,7 +46,7 @@ void AMainCharacter::BeginPlay()
 	FActorSpawnParameters SpawnParams;
 	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
-	CurrentWeapon = GetWorld()->SpawnActor<ARocketLauncher>(StarterWeaponClass, FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
+	CurrentWeapon = GetWorld()->SpawnActor<AMyWeapon_Gun>(StarterWeaponClass, FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
 	if (CurrentWeapon)
 	{
 		CurrentWeapon->SetOwner(this);

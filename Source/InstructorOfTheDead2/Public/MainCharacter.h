@@ -54,13 +54,13 @@ protected:
 
 	void EndZoom();
 
-
-	//AMyWeapon_Gun * CurrentWeapon;
 	UPROPERTY(Replicated)
-	ARocketLauncher * CurrentWeapon;
+	AMyWeapon_Gun * CurrentWeapon;
+	//UPROPERTY(Replicated)
+	//ARocketLauncher * CurrentWeapon;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Player")
-		TSubclassOf<ARocketLauncher> StarterWeaponClass;
+		TSubclassOf<AMyWeapon_Gun> StarterWeaponClass;
 
 		UPROPERTY(VisibleDefaultsOnly, Category = "Player")
 		FName WeaponAttachSocketName;
