@@ -9,6 +9,7 @@
 #include "RocketLauncher.h"
 #include "MyWeapon_Gun.h"
 #include "Net/UnrealNetwork.h"
+#include "InstructorOfTheDead2.h"
 
 
 // Sets default values
@@ -19,7 +20,7 @@ AMainCharacter::AMainCharacter()
 
 	GetMovementComponent()->GetNavAgentPropertiesRef().bCanCrouch = true;
 
-
+	GetCapsuleComponent()->SetCollisionResponseToChannel(COLLISION_WEAPON, ECR_Block);
 
 	SpringArmComp = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArmComp"));
 	SpringArmComp->bUsePawnControlRotation = true;
