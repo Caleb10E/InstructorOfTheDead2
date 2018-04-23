@@ -1,17 +1,17 @@
 using UnrealBuildTool;
 
-public class Testing : ModuleRules
+public class TestingModule : ModuleRules
 {
-    public Testing( TargetInfo Target )
+    public TestingModule( ReadOnlyTargetRules Target )
     {
 		// Include Module Dependencies
         PublicDependencyModuleNames.AddRange( new string[] { "Core", "Engine" } );
         PrivateDependencyModuleNames.AddRange( new string[] { "RenderCore" } );
 		
 		// Include module header files
-       PublicIncludePaths.AddRange(new string[] {"Testing/Public"});
+       PublicIncludePaths.AddRange(new string[] {"TestingModule/Public"});
        
        // Include module source files
-       PrivateIncludePaths.AddRange(new string[] {"Testing/Private"});
+       PrivateIncludePaths.AddRange(new string[] {"TestingModule/Private"});
     }
 }
