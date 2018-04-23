@@ -11,6 +11,12 @@
 			"AdditionalDependencies": [
 				"Engine"
 			]
+		},
+		{
+			
+			"NAME": "Testing",
+			"TYPE": "Runtime",
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
