@@ -6,7 +6,7 @@
 // Sets default values for this component's properties
 UMyHealthComponent::UMyHealthComponent()
 {
-	DefaultHealth = 100;
+	DefaultHealth = 0;
 }
 
 
@@ -34,7 +34,8 @@ void UMyHealthComponent::HandleTakeAnyDamage(AActor * DamagedActor, float Damage
 	}
 
 
-	Health = FMath::Clamp(Health - Damage, 0.0f, DefaultHealth);
+	//Health = FMath::Clamp(Health - Damage, 0.0f, DefaultHealth);
+	Health += Damage;
 
 
 	UE_LOG(LogTemp, Log, TEXT("Health Changed: %s"), *FString::SanitizeFloat(Health));

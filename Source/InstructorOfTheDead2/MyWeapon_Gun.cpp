@@ -21,7 +21,7 @@ AMyWeapon_Gun::AMyWeapon_Gun()
 
 	TracerTargetName = "Target";
 
-	BaseDamage = 20.0f;
+	BaseDamage = 2.0f;
 
 	SetReplicates(true);
 
@@ -115,7 +115,7 @@ void AMyWeapon_Gun::Fire()
 			float ActualDamage = BaseDamage;
 			if (SurfaceType == SURFACE_FLESHVULNERABLE)
 			{
-				ActualDamage *= 4.0f;
+				ActualDamage *= 20.0f;
 			}
 
 			UGameplayStatics::ApplyPointDamage(HitActor, ActualDamage, ShortDirection, Hit, MyOwner->GetInstigatorController(), this, DamageType);

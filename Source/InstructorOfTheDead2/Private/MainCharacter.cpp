@@ -32,6 +32,7 @@ AMainCharacter::AMainCharacter()
 	ZoomedFOV = 65.0f;
 	ZoomInterpSpeed = 20;
 
+	bCanBeDamaged = true;
 
 	WeaponAttachSocketName = "GunSocket";
 }
