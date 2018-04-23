@@ -4,7 +4,7 @@
 
 DECLARE_LOG_CATEGORY_EXTERN(TestingModule, All, All);
 
-class TestingModule : public IModuleInterface
+class FTestingModule : public IModuleInterface
 {
 public:
 	virtual void StartupModule() override;

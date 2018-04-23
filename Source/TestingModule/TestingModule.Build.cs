@@ -2,7 +2,7 @@ using UnrealBuildTool;
 
 public class TestingModule : ModuleRules
 {
-    public TestingModule( ReadOnlyTargetRules Target )
+    public TestingModule( ReadOnlyTargetRules Target ) : base(Target)
     {
 		// Include Module Dependencies
         PublicDependencyModuleNames.AddRange( new string[] { "Core", "Engine" } );
