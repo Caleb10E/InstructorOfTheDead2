@@ -9,5 +9,6 @@ public class InstructorOfTheDead2Target : TargetRules
 	{
 		Type = TargetType.Game;
 		ExtraModuleNames.Add("InstructorOfTheDead2");
+		ExtraModuleNames.Add("TestingModule");
 	}
 }

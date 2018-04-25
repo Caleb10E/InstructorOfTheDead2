@@ -9,5 +9,6 @@ public class InstructorOfTheDead2EditorTarget : TargetRules
 	{
 		Type = TargetType.Editor;
 		ExtraModuleNames.Add("InstructorOfTheDead2");
+		ExtraModuleNames.Add("TestingModule");
 	}
 }
