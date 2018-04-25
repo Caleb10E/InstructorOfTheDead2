@@ -10,6 +10,20 @@ class USkeltalMeshComponent;
 class UDamageType;
 class UParticleSystem;
 
+USTRUCT()
+struct FHitScanTrace
+{
+	GENERATED_BODY()
+
+public:
+
+	UPROPERTY()
+	TEnumAsByte<EPhysicalSurface> SurfaceType;
+
+	UPROPERTY()
+	FVector_NetQuantize TraceTo;
+};
+
 UCLASS()
 class INSTRUCTOROFTHEDEAD2_API AMyWeapon_Gun : public AActor
 {
@@ -20,14 +34,10 @@ public:
 	AMyWeapon_Gun();
 
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
 
 	UPROPERTY(visibleAnywhere,BlueprintReadOnly,Category ="Components")
 	USkeletalMeshComponent * MeshComp;
 
-
-	
 	UPROPERTY(EditDefaultsOnly,BlueprintReadOnly,Category = "Weapon")
 	TSubclassOf<UDamageType> DamageType;
 
@@ -41,14 +51,37 @@ protected:
 	UParticleSystem * MuzzleEffect;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Weapon")
-		UParticleSystem * ImpactEffect;
+		UParticleSystem * DefaultImpactEffect;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Weapon")
+		UParticleSystem* FleshImpactEffects;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Weapon")
 		UParticleSystem * TracerEffect;
 
+	void PlayFireEffects(FVector TraceEnd);
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+	TSubclassOf<UCameraShake> FireCamShake;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+	float BaseDamage;
+
+	///void Fire();
+
+	UFUNCTION(Server, Reliable, WithValidation)
+		void ServerFire();
+
+
+	UPROPERTY(ReplicatedUsing=On_Rep_HitScanTrace)
+	FHitScanTrace HitScanTrace;
+
+	UFUNCTION()
+	void On_Rep_HitScanTrace();
+
+	void PlayImpactEffects(EPhysicalSurface SurfaceType, FVector ImpactPoint);
+
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		virtual void Fire();

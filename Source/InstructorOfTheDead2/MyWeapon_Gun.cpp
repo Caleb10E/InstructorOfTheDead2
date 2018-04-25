@@ -6,13 +6,13 @@
 #include "Particles/ParticleSystem.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Particles/ParticleSystemComponent.h"
-
+#include "PhysicalMaterials/PhysicalMaterial.h"
+#include "InstructorOfTheDead2.h"
+#include "Net/UnrealNetwork.h"
 
 // Sets default values
 AMyWeapon_Gun::AMyWeapon_Gun()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
 
 	MeshComp = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("MeshComp"));
 	RootComponent = MeshComp;
@@ -21,19 +21,67 @@ AMyWeapon_Gun::AMyWeapon_Gun()
 
 	TracerTargetName = "Target";
 
+	BaseDamage = 2.0f;
+
+	SetReplicates(true);
+
+	NetUpdateFrequency = 66.0f;
+	MinNetUpdateFrequency = 33.0f;
 }
 
-// Called when the game starts or when spawned
-void AMyWeapon_Gun::BeginPlay()
+
+
+void AMyWeapon_Gun::ServerFire_Implementation()
 {
-	Super::BeginPlay();
-	
+	Fire();
+}
+
+bool AMyWeapon_Gun::ServerFire_Validate()
+{
+	return true;
+}
+
+void AMyWeapon_Gun::On_Rep_HitScanTrace()
+{
+	PlayFireEffects(HitScanTrace.TraceTo);
+	PlayImpactEffects(HitScanTrace.SurfaceType, HitScanTrace.TraceTo);
+}
+
+void AMyWeapon_Gun::PlayImpactEffects(EPhysicalSurface SurfaceType, FVector ImpactPoint)
+{
+	UParticleSystem* SelectedEffect = nullptr;
+
+	switch (SurfaceType)
+	{
+	case SURFACE_FLESHDEFAULT:
+	case SURFACE_FLESHVULNERABLE:
+		SelectedEffect = FleshImpactEffects;
+		break;
+	default:
+		SelectedEffect = DefaultImpactEffect;
+		break;
+	}
+
+
+	if (SelectedEffect)
+	{
+		FVector MuzzleLocation = MeshComp->GetSocketLocation(MuzzleSocketName);
+
+		FVector ShotDirection = ImpactPoint - MuzzleLocation;
+		ShotDirection.Normalize();
+
+		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), SelectedEffect, ImpactPoint, ShotDirection.Rotation());
+	}
+
 }
 
 void AMyWeapon_Gun::Fire()
 {
-	//Trace the world fomr pawn eyes to cross hair location 
 	
+	if (Role < ROLE_Authority)
+	{
+		ServerFire();
+	}
 	
 	AActor* MyOwner = GetOwner();
 	if (MyOwner)
@@ -50,55 +98,88 @@ void AMyWeapon_Gun::Fire()
 		QueryParams.AddIgnoredActor(MyOwner);
 		QueryParams.AddIgnoredActor(this);
 		QueryParams.bTraceComplex = true;
+		QueryParams.bReturnPhysicalMaterial = true;
 
 		//Particle "target parameter idf we blocking target
 		FVector TracerEndPoint = TraceEnd;
+		EPhysicalSurface SurfaceType = SurfaceType_Default;
 
 		FHitResult Hit;
-		if (GetWorld()->LineTraceSingleByChannel(Hit, EyeLocation, TraceEnd, ECC_Visibility, QueryParams))
+		if (GetWorld()->LineTraceSingleByChannel(Hit, EyeLocation, TraceEnd, COLLISION_WEAPON, QueryParams))
 		{
-			//blocking hit process damage
+		
 			AActor * HitActor = Hit.GetActor();
 
-			UGameplayStatics::ApplyPointDamage(HitActor, 20.0f, ShortDirection, Hit, MyOwner->GetInstigatorController(), this, DamageType);
+			 SurfaceType = UPhysicalMaterial::DetermineSurfaceType(Hit.PhysMaterial.Get());
 
-			if (ImpactEffect)
+			float ActualDamage = BaseDamage;
+			if (SurfaceType == SURFACE_FLESHVULNERABLE)
 			{
-				UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ImpactEffect, Hit.ImpactPoint, Hit.ImpactNormal.Rotation());
+				ActualDamage *= 20.0f;
 			}
+
+			UGameplayStatics::ApplyPointDamage(HitActor, ActualDamage, ShortDirection, Hit, MyOwner->GetInstigatorController(), this, DamageType);
+			
+			PlayImpactEffects(SurfaceType, Hit.ImpactPoint);
+
 			TracerEndPoint = Hit.ImpactPoint;
+
 		}
 
-		DrawDebugLine(GetWorld(), EyeLocation, TraceEnd, FColor::White, false, 1.0f, 0, 1.0f);
-
-		if (MuzzleEffect)
-		{
-			UGameplayStatics::SpawnEmitterAttached(MuzzleEffect, MeshComp, MuzzleSocketName);
-		}
+		//DrawDebugLine(GetWorld(), EyeLocation, TraceEnd, FColor::White, false, 1.0f, 0, 1.0f);
 
 		
+		PlayFireEffects(TracerEndPoint);
 
-		if (TracerEffect)
+		if (Role == ROLE_Authority)
 		{
-			FVector MuzzleLocation = MeshComp->GetSocketLocation(MuzzleSocketName);
-
-			UParticleSystemComponent * TracerComp = UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), TracerEffect, MuzzleLocation);
-		
-			if (TracerComp)
-			{
-				TracerComp->SetVectorParameter(TracerTargetName, TracerEndPoint);
-			}
-
+			HitScanTrace.TraceTo = TracerEndPoint;
+			HitScanTrace.SurfaceType = SurfaceType;
 		}
 	}
 
 	
 }
 
-// Called every frame
-void AMyWeapon_Gun::Tick(float DeltaTime)
+void AMyWeapon_Gun::PlayFireEffects(FVector TraceEnd)
 {
-	Super::Tick(DeltaTime);
 
+	if (MuzzleEffect)
+	{
+		UGameplayStatics::SpawnEmitterAttached(MuzzleEffect, MeshComp, MuzzleSocketName);
+	}
+
+
+
+	if (TracerEffect)
+	{
+		FVector MuzzleLocation = MeshComp->GetSocketLocation(MuzzleSocketName);
+
+		UParticleSystemComponent * TracerComp = UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), TracerEffect, MuzzleLocation);
+
+		if (TracerComp)
+		{
+			TracerComp->SetVectorParameter(TracerTargetName, TraceEnd);
+		}
+
+	}
+
+	APawn* MyOwner = Cast<APawn>(GetOwner());
+	if (MyOwner)
+	{
+		APlayerController* PC = Cast<APlayerController>(MyOwner->GetController());
+		if (PC)
+		{
+			PC->ClientPlayCameraShake(FireCamShake);
+		}
+	}
 }
 
+
+void  AMyWeapon_Gun::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME_CONDITION(AMyWeapon_Gun,HitScanTrace,COND_SkipOwner);
+	//DOREPLIFETIME(ASCharacter, bDied);
+}
