@@ -1,7 +1,9 @@
 using UnrealBuildTool;
 
+
 public class TestingModule : ModuleRules
 {
+
     public TestingModule( ReadOnlyTargetRules Target ) : base(Target)
     {
 		// Include Module Dependencies
@@ -13,5 +15,7 @@ public class TestingModule : ModuleRules
        
        // Include module source files
        PrivateIncludePaths.AddRange(new string[] {"TestingModule/Private"});
+
+        PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
     }
 }
