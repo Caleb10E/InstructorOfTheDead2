@@ -16,6 +16,7 @@ public class TestingModule : ModuleRules
        // Include module source files
        PrivateIncludePaths.AddRange(new string[] {"TestingModule/Private"});
 
+        // Used to Disable "Precompiled Headers" Requirement
         PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
     }
 }
