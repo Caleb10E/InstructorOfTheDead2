@@ -59,6 +59,7 @@ protected:
 	//UPROPERTY(Replicated)
 	//ARocketLauncher * CurrentWeapon;
 
+
 	UPROPERTY(EditDefaultsOnly, Category = "Player")
 		TSubclassOf<AMyWeapon_Gun> StarterWeaponClass;
 

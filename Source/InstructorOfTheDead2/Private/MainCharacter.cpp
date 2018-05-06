@@ -10,6 +10,7 @@
 #include "MyWeapon_Gun.h"
 #include "Net/UnrealNetwork.h"
 #include "InstructorOfTheDead2.h"
+#include "LevelBoundary.h"
 
 
 // Sets default values
@@ -156,3 +157,4 @@ void AMainCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
 	DOREPLIFETIME(AMainCharacter, CurrentWeapon);
 	//DOREPLIFETIME(ASCharacter, bDied);
 }
+
