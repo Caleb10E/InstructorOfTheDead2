@@ -7,7 +7,9 @@
 #include "../Public/MainCharacter.h"
 #include "GameFramework/PawnMovementComponent.h"
 #include "RocketLauncher.h"
+#include "MyWeapon_Gun.h"
 #include "Net/UnrealNetwork.h"
+#include "InstructorOfTheDead2.h"
 
 
 // Sets default values
@@ -18,7 +20,7 @@ AMainCharacter::AMainCharacter()
 
 	GetMovementComponent()->GetNavAgentPropertiesRef().bCanCrouch = true;
 
-
+	GetCapsuleComponent()->SetCollisionResponseToChannel(COLLISION_WEAPON, ECR_Block);
 
 	SpringArmComp = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArmComp"));
 	SpringArmComp->bUsePawnControlRotation = true;
@@ -30,6 +32,7 @@ AMainCharacter::AMainCharacter()
 	ZoomedFOV = 65.0f;
 	ZoomInterpSpeed = 20;
 
+	bCanBeDamaged = true;
 
 	WeaponAttachSocketName = "GunSocket";
 }
@@ -41,15 +44,18 @@ void AMainCharacter::BeginPlay()
 
 	DefaultFOV = CameraComp->FieldOfView;
 
-
-	FActorSpawnParameters SpawnParams;
-	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-
-	CurrentWeapon = GetWorld()->SpawnActor<ARocketLauncher>(StarterWeaponClass, FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
-	if (CurrentWeapon)
+	if (Role == ROLE_Authority)
 	{
-		CurrentWeapon->SetOwner(this);
-		CurrentWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponAttachSocketName);
+
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+		CurrentWeapon = GetWorld()->SpawnActor<AMyWeapon_Gun>(StarterWeaponClass, FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
+		if (CurrentWeapon)
+		{
+			CurrentWeapon->SetOwner(this);
+			CurrentWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponAttachSocketName);
+		}
 	}
 	
 }
@@ -104,6 +110,8 @@ void AMainCharacter::Fire()
 	}
 
 }
+
+
 
 // Called to bind functionality to input
 void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)

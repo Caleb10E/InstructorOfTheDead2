@@ -8,6 +8,7 @@ void ARocketLauncher::Fire()
 	if (Role < ROLE_Authority)
 	{
 		ServerFire();
+		return;
 	}
 
 
