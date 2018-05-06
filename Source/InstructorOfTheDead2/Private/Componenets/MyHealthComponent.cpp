@@ -6,7 +6,7 @@
 // Sets default values for this component's properties
 UMyHealthComponent::UMyHealthComponent()
 {
-	DefaultHealth = 0;
+	DefaultHealth = 100;
 }
 
 
