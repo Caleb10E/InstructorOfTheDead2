@@ -113,7 +113,7 @@ void AMainCharacter::Fire()
 			CurrentWeapon->Fire();
 		}
 
-		GetWorld()->GetTimerManager().SetTimer(FireDelay, this, &AMainCharacter::ResetFire, 1.0f, false);
+		GetWorld()->GetTimerManager().SetTimer(FireDelay, this, &AMainCharacter::ResetFire, 0.4f, false);
 	}
 
 }
