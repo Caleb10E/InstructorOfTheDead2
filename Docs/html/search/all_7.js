@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['levelboundarytest',['LevelBoundaryTest',['../class_level_boundary_test.html',1,'']]],
-  ['levelboundarytest2',['LevelBoundaryTest2',['../class_level_boundary_test2.html',1,'']]],
-  ['lookupatrate',['LookUpAtRate',['../class_a_instructor_of_the_dead2_character.html#a85db2f08175143a34e1d72304348a840',1,'AInstructorOfTheDead2Character']]]
+  ['hitscantrace',['HitScanTrace',['../class_a_my_weapon___gun.html#a63a32b90438b170a8b5b41a83051cb3e',1,'AMyWeapon_Gun']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['damagetype',['DamageType',['../class_a_my_weapon___gun.html#a8d5171dbf961d142e836c08c61042fd1',1,'AMyWeapon_Gun']]],
-  ['defaultimpacteffect',['DefaultImpactEffect',['../class_a_my_weapon___gun.html#ac2f8ae09bfe4a45ffecd1152992b7bd1',1,'AMyWeapon_Gun']]]
+  ['cameracomp',['CameraComp',['../class_a_main_character.html#a83ceb44c34596cf092b3fbdaf6d66649',1,'AMainCharacter']]],
+  ['currentweapon',['CurrentWeapon',['../class_a_main_character.html#a564bee74c5e98baec0d48df92b73fd26',1,'AMainCharacter']]]
 ];
