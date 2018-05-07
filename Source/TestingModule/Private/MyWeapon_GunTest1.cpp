@@ -5,7 +5,7 @@
 #include "AutomationCommon.h"
 #include "WeaponTestObj.h"
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FMyWeapon_GunTest1, "GameTests.WhiteBox.GunComponent GunTest1", EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FMyWeapon_GunTest1, "GameTests.WhiteBox.GunComponent ShouldNotFireBackwards__Valid_Trajectory__Should_Pass", EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
 
 bool FMyWeapon_GunTest1::RunTest(const FString& Parameters)
 {
