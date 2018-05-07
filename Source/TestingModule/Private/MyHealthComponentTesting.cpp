@@ -3,7 +3,7 @@
 #include "AutomationTest.h"
 #include "AutomationCommon.h"
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FMyHealthComponentTesting, "GameTests HealthTest", EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FMyHealthComponentTesting, "GameTests.WhiteBox.HealthComponent HealthTest1", EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
 
 bool FMyHealthComponentTesting::RunTest(const FString& Parameters)
 {
