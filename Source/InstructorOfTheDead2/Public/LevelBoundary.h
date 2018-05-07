@@ -26,7 +26,7 @@ public:
 	UFUNCTION()
 		void OnOverlapEnd(class AActor* OverlappedActor, class AActor* OverActor);
 
-	FVector Respawn = FVector(700, 0, 15000);
+	FVector Respawn = FVector(700, 0, 8500);
 	
 	
 	
