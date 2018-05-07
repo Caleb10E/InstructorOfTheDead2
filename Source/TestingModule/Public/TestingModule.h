@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Engine.h"
+#include "UnrealNetwork.h"
 #include "Modules/ModuleInterface.h"
 #include "Modules/ModuleManager.h"
 #include "UnrealEd.h"

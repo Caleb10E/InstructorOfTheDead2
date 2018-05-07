@@ -13,9 +13,8 @@
 			]
 		},
 		{
-			
-			"NAME": "TestingModule",
-			"TYPE": "Runtime",
+			"Name": "TestingModule",
+			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}
 	],
