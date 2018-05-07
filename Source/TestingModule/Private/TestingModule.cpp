@@ -1,8 +1,12 @@
 #include "TestingModule.h"
+#include "Modules/ModuleManager.h"
+#include "Modules/ModuleInterface.h"
 
 DEFINE_LOG_CATEGORY(TestingModule);
 
 IMPLEMENT_GAME_MODULE(FTestingModule, TestingModule);
+
+#define LOCTEXT_NAMESPACE "MyGameEditor"
 
 void FTestingModule::StartupModule()
 {
@@ -14,6 +18,4 @@ void FTestingModule::ShutdownModule()
 	UE_LOG(TestingModule, Warning, TEXT("Testing module has shut down"));
 }
 
-//#undef LOCTEXT_NAMESPACE
-
-//IMPLEMENT_MODULE(FTestingModule, TestingModule)
+#undef LOCTEXT_NAMESPACE
