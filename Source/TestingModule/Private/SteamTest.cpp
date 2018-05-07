@@ -15,8 +15,10 @@ bool FSteamTest::RunTest(const FString& Parameters)
 	bool results = false;
 	IOnlineSubsystem* Subsystem = IOnlineSubsystem::Get();
 	if (Subsystem != nullptr) {
-		results = true;
-
+		IOnlineSessionPtr SessionInterface = Subsystem->GetSessionInterface();
+		if (SessionInterface.IsValid()) {
+			results = true;
+		}
 	}
 
 	return results;
