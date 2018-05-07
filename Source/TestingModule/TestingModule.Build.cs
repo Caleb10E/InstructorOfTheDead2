@@ -12,9 +12,9 @@ public class TestingModule : ModuleRules
 		
 		// Include module header files
        PublicIncludePaths.AddRange(new string[] {"TestingModule/Public"});
-       
-       // Include module source files
-       PrivateIncludePaths.AddRange(new string[] {"TestingModule/Private"});
+
+        // Include module source files
+        PrivateIncludePaths.AddRange(new string[] { "TestingModule/Private"});
 
         // Used to Disable "Precompiled Headers" Requirement
         PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
