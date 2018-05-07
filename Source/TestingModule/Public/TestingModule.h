@@ -11,7 +11,7 @@ DECLARE_LOG_CATEGORY_EXTERN(TestingModule, All, All);
 class FTestingModule : public IModuleInterface
 {
 public:
-	virtual void StartupModule() override;
+	virtual void StartupModule() override; ///< Setup Function. Logs startup.
 
-	virtual void ShutdownModule() override;
+	virtual void ShutdownModule() override; ///< Teardown Function. Logs shutdown.
 };

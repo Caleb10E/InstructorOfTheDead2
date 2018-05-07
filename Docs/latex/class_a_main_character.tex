@@ -1,0 +1,95 @@
+\hypertarget{class_a_main_character}{}\section{A\+Main\+Character Class Reference}
+\label{class_a_main_character}\index{A\+Main\+Character@{A\+Main\+Character}}
+Inheritance diagram for A\+Main\+Character\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_main_character}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_main_character_a44a6be77fb1c8617c144a85fc084ad2b}\label{class_a_main_character_a44a6be77fb1c8617c144a85fc084ad2b}} 
+virtual void \mbox{\hyperlink{class_a_main_character_a44a6be77fb1c8617c144a85fc084ad2b}{Tick}} (float Delta\+Time) override
+\begin{DoxyCompactList}\small\item\em Actions to be done on every tick. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_a96eb814e0d995ca16f33e92256756046}\label{class_a_main_character_a96eb814e0d995ca16f33e92256756046}} 
+virtual void \mbox{\hyperlink{class_a_main_character_a96eb814e0d995ca16f33e92256756046}{Setup\+Player\+Input\+Component}} (class U\+Input\+Component $\ast$Player\+Input\+Component) override
+\begin{DoxyCompactList}\small\item\em Bind functionality to user input. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_adb24c0fcbd3fe89d3b246981b16b8b5e}\label{class_a_main_character_adb24c0fcbd3fe89d3b246981b16b8b5e}} 
+virtual F\+Vector \mbox{\hyperlink{class_a_main_character_adb24c0fcbd3fe89d3b246981b16b8b5e}{Get\+Pawn\+View\+Location}} () const override
+\begin{DoxyCompactList}\small\item\em Vector the player location. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_a2e3680c05b799891aa06311103314f40}\label{class_a_main_character_a2e3680c05b799891aa06311103314f40}} 
+void \mbox{\hyperlink{class_a_main_character_a2e3680c05b799891aa06311103314f40}{Reset\+Fire}} ()
+\begin{DoxyCompactList}\small\item\em Resets the fire action allowing the player to shoot again. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_main_character_a03aaa75e5621aece381717731ade0529}\label{class_a_main_character_a03aaa75e5621aece381717731ade0529}} 
+bool \mbox{\hyperlink{class_a_main_character_a03aaa75e5621aece381717731ade0529}{player\+Can\+Fire}}
+\begin{DoxyCompactList}\small\item\em Sets whether the player can fire. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_aeb723bc23c75b06e706ae1e973d6e14e}\label{class_a_main_character_aeb723bc23c75b06e706ae1e973d6e14e}} 
+F\+Timer\+Handle \mbox{\hyperlink{class_a_main_character_aeb723bc23c75b06e706ae1e973d6e14e}{Fire\+Delay}}
+\begin{DoxyCompactList}\small\item\em The delay between subsequent shots. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_main_character_a096ef46022cd84777b571482729ed02f}\label{class_a_main_character_a096ef46022cd84777b571482729ed02f}} 
+virtual void \mbox{\hyperlink{class_a_main_character_a096ef46022cd84777b571482729ed02f}{Begin\+Play}} () override
+\begin{DoxyCompactList}\small\item\em Callback function called when the game starts or when spawned. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_aa85b946058cdc5f9b68ce529c9c680d8}\label{class_a_main_character_aa85b946058cdc5f9b68ce529c9c680d8}} 
+void \mbox{\hyperlink{class_a_main_character_aa85b946058cdc5f9b68ce529c9c680d8}{Move\+Forward}} (float Value)
+\begin{DoxyCompactList}\small\item\em Defines the Move\+Foward action for the player. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_aa3b2268816c54828d166ea626fdde411}\label{class_a_main_character_aa3b2268816c54828d166ea626fdde411}} 
+void \mbox{\hyperlink{class_a_main_character_aa3b2268816c54828d166ea626fdde411}{Move\+Right}} (float Value)
+\begin{DoxyCompactList}\small\item\em Defines how a player turns. Note, this defines moving right A\+ND L\+E\+FT. We are idiots and can\textquotesingle{}t name methods properly to save our life. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_a44625f8c76490dfa989dc046b0612e07}\label{class_a_main_character_a44625f8c76490dfa989dc046b0612e07}} 
+void \mbox{\hyperlink{class_a_main_character_a44625f8c76490dfa989dc046b0612e07}{Begin\+Crouch}} ()
+\begin{DoxyCompactList}\small\item\em Defines the action taken when crouch action player. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_a633a5955e941f4ff343709eed9141154}\label{class_a_main_character_a633a5955e941f4ff343709eed9141154}} 
+void \mbox{\hyperlink{class_a_main_character_a633a5955e941f4ff343709eed9141154}{End\+Crouch}} ()
+\begin{DoxyCompactList}\small\item\em ///$<$ Defines the Move\+Foward action for the player \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_a4f7eea1e58e20b96564f3408f49737b6}\label{class_a_main_character_a4f7eea1e58e20b96564f3408f49737b6}} 
+void \mbox{\hyperlink{class_a_main_character_a4f7eea1e58e20b96564f3408f49737b6}{Begin\+Zoom}} ()
+\begin{DoxyCompactList}\small\item\em Actions to perform when zooming begins. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_ab226b5c0e4c8fa348e61f0da84680d3e}\label{class_a_main_character_ab226b5c0e4c8fa348e61f0da84680d3e}} 
+void \mbox{\hyperlink{class_a_main_character_ab226b5c0e4c8fa348e61f0da84680d3e}{End\+Zoom}} ()
+\begin{DoxyCompactList}\small\item\em Actions to perform when zooming ends. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_a741be0918633d2d40692e97dfba67d69}\label{class_a_main_character_a741be0918633d2d40692e97dfba67d69}} 
+void {\bfseries Fire} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_main_character_a83ceb44c34596cf092b3fbdaf6d66649}\label{class_a_main_character_a83ceb44c34596cf092b3fbdaf6d66649}} 
+U\+Camera\+Component $\ast$ \mbox{\hyperlink{class_a_main_character_a83ceb44c34596cf092b3fbdaf6d66649}{Camera\+Comp}}
+\begin{DoxyCompactList}\small\item\em Reference to the player camera. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_a149e14225fb4febe5e2dc1d2cdf976fc}\label{class_a_main_character_a149e14225fb4febe5e2dc1d2cdf976fc}} 
+U\+Spring\+Arm\+Component $\ast$ \mbox{\hyperlink{class_a_main_character_a149e14225fb4febe5e2dc1d2cdf976fc}{Spring\+Arm\+Comp}}
+\begin{DoxyCompactList}\small\item\em Reference to the Spring\+Arm (controls where firearms attach). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_a72af24b99adafa7b9d024732b00957c8}\label{class_a_main_character_a72af24b99adafa7b9d024732b00957c8}} 
+bool \mbox{\hyperlink{class_a_main_character_a72af24b99adafa7b9d024732b00957c8}{b\+Wants\+To\+Zoom}}
+\begin{DoxyCompactList}\small\item\em Boolean to determine if player is zooming. Used by \mbox{\hyperlink{class_a_main_character_a4f7eea1e58e20b96564f3408f49737b6}{Begin\+Zoom()}} and \mbox{\hyperlink{class_a_main_character_ab226b5c0e4c8fa348e61f0da84680d3e}{End\+Zoom()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_a6be486b784b9900a9217a022be6bcaa2}\label{class_a_main_character_a6be486b784b9900a9217a022be6bcaa2}} 
+float \mbox{\hyperlink{class_a_main_character_a6be486b784b9900a9217a022be6bcaa2}{Zoomed\+F\+OV}}
+\begin{DoxyCompactList}\small\item\em Maximum zoomed-\/in Field of Vision. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_acb71d1fee43be1c94560bc6f427bdc3f}\label{class_a_main_character_acb71d1fee43be1c94560bc6f427bdc3f}} 
+float \mbox{\hyperlink{class_a_main_character_acb71d1fee43be1c94560bc6f427bdc3f}{Zoom\+Interp\+Speed}}
+\begin{DoxyCompactList}\small\item\em How fast to zoom. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_aff0b6ec995a455073f0f4bb50cb15624}\label{class_a_main_character_aff0b6ec995a455073f0f4bb50cb15624}} 
+float \mbox{\hyperlink{class_a_main_character_aff0b6ec995a455073f0f4bb50cb15624}{Default\+F\+OV}}
+\begin{DoxyCompactList}\small\item\em The default field of vision for the player. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_a564bee74c5e98baec0d48df92b73fd26}\label{class_a_main_character_a564bee74c5e98baec0d48df92b73fd26}} 
+\mbox{\hyperlink{class_a_my_weapon___gun}{A\+My\+Weapon\+\_\+\+Gun}} $\ast$ \mbox{\hyperlink{class_a_main_character_a564bee74c5e98baec0d48df92b73fd26}{Current\+Weapon}}
+\begin{DoxyCompactList}\small\item\em A pointer to the players current weapon. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_ab4701b65e5eaf3217ef385962c081620}\label{class_a_main_character_ab4701b65e5eaf3217ef385962c081620}} 
+T\+Subclass\+Of$<$ \mbox{\hyperlink{class_a_my_weapon___gun}{A\+My\+Weapon\+\_\+\+Gun}} $>$ \mbox{\hyperlink{class_a_main_character_ab4701b65e5eaf3217ef385962c081620}{Starter\+Weapon\+Class}}
+\begin{DoxyCompactList}\small\item\em Exposes the startingweapon to the Editor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_main_character_a661bb8f07ac38949071c5683b0d33251}\label{class_a_main_character_a661bb8f07ac38949071c5683b0d33251}} 
+F\+Name \mbox{\hyperlink{class_a_main_character_a661bb8f07ac38949071c5683b0d33251}{Weapon\+Attach\+Socket\+Name}}
+\begin{DoxyCompactList}\small\item\em Reference to the point on the player where the weapon can be attached. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Instructor\+Of\+The\+Dead2/\+Public/Main\+Character.\+h\item 
+Source/\+Instructor\+Of\+The\+Dead2/\+Private/Main\+Character.\+cpp\end{DoxyCompactItemize}
