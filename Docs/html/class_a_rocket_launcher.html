@@ -82,16 +82,20 @@ Inheritance diagram for ARocketLauncher:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a32f4db5a70f3a9e6b8cf0d8c0e84f78b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_rocket_launcher.html#a32f4db5a70f3a9e6b8cf0d8c0e84f78b">Fire</a> () override</td></tr>
+<tr class="memitem:a32f4db5a70f3a9e6b8cf0d8c0e84f78b"><td class="memItemLeft" align="right" valign="top"><a id="a32f4db5a70f3a9e6b8cf0d8c0e84f78b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_rocket_launcher.html#a32f4db5a70f3a9e6b8cf0d8c0e84f78b">Fire</a> () override</td></tr>
+<tr class="memdesc:a32f4db5a70f3a9e6b8cf0d8c0e84f78b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fires the gun. Short circuits, if called on a client, and serverfire() is called instead. Temporarily, overrides parent class method to solve a bug. <br /></td></tr>
 <tr class="separator:a32f4db5a70f3a9e6b8cf0d8c0e84f78b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af09c3d3fd27a768ddafde48045b3e4e5"><td class="memItemLeft" align="right" valign="top"><a id="af09c3d3fd27a768ddafde48045b3e4e5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ServerFire</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_rocket_launcher.html#af09c3d3fd27a768ddafde48045b3e4e5">ServerFire</a> ()</td></tr>
+<tr class="memdesc:af09c3d3fd27a768ddafde48045b3e4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has a player "fire" from the server's end and then replicate the action. Temporarily, overrides parent class method to solve a bug. <br /></td></tr>
 <tr class="separator:af09c3d3fd27a768ddafde48045b3e4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a4974bb444bf93eb2c6d7d6e04e6ea4a0"><td class="memItemLeft" align="right" valign="top"><a id="a4974bb444bf93eb2c6d7d6e04e6ea4a0"></a>
-TSubclassOf&lt; AActor &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>RocketLauncherClass</b></td></tr>
+TSubclassOf&lt; AActor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_rocket_launcher.html#a4974bb444bf93eb2c6d7d6e04e6ea4a0">RocketLauncherClass</a></td></tr>
+<tr class="memdesc:a4974bb444bf93eb2c6d7d6e04e6ea4a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exposes Class to the Editor. <br /></td></tr>
 <tr class="separator:a4974bb444bf93eb2c6d7d6e04e6ea4a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -155,35 +159,6 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <tr class="memdesc:a63a32b90438b170a8b5b41a83051cb3e inherit pro_attribs_class_a_my_weapon___gun"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the. <br /></td></tr>
 <tr class="separator:a63a32b90438b170a8b5b41a83051cb3e inherit pro_attribs_class_a_my_weapon___gun"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a32f4db5a70f3a9e6b8cf0d8c0e84f78b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32f4db5a70f3a9e6b8cf0d8c0e84f78b">&#9670;&nbsp;</a></span>Fire()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ARocketLauncher::Fire </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Fires the gun. Short circuits, if called on a client, and serverfire() is called instead. </p>
-
-<p>Reimplemented from <a class="el" href="class_a_my_weapon___gun.html#a8b430c2ea96f507fa29e2eceb7ebc552">AMyWeapon_Gun</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Source/InstructorOfTheDead2/Public/<a class="el" href="_rocket_launcher_8h_source.html">RocketLauncher.h</a></li>
 <li>Source/InstructorOfTheDead2/Private/RocketLauncher.cpp</li>

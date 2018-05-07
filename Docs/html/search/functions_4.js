@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['on_5frep_5fhitscantrace',['On_Rep_HitScanTrace',['../class_a_my_weapon___gun.html#af37b774edf0e46530795e38cb55c69ae',1,'AMyWeapon_Gun']]],
-  ['onresetvr',['OnResetVR',['../class_a_instructor_of_the_dead2_character.html#a0184954967f084a32645f6a922b9abf6',1,'AInstructorOfTheDead2Character']]]
+  ['moveforward',['MoveForward',['../class_a_instructor_of_the_dead2_character.html#abcb6cf374cdbe25d392fcc8f200aabc4',1,'AInstructorOfTheDead2Character']]],
+  ['moveright',['MoveRight',['../class_a_instructor_of_the_dead2_character.html#aef03c889b18601bafcbae9ae599fafaa',1,'AInstructorOfTheDead2Character']]]
 ];
