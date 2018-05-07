@@ -11,7 +11,7 @@ bool FMyWeapon_GunTest2::RunTest(const FString& Parameters)
 {
 	AWeaponTestObj* weptest = new AWeaponTestObj();
 	FVector bulletStart = FVector(0.0, 0.0, 0.0);
-	FVector bulletEnd = FVector(0.0, 10.0, 0.0);
+	FVector bulletEnd = FVector(0.0, 5.0, 0.0);
 	FVector eyeStart = FVector(0.0, 0.0, 0.0);
 	FVector eyeEnd = FVector(1.0, 0.0, 0.0);
 

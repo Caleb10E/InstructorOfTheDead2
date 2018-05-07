@@ -14,17 +14,9 @@ AWeaponTestObj::AWeaponTestObj()
 bool AWeaponTestObj::calcVector(FVector bulletStart, FVector bulletEnd, FVector eyeStart, FVector eyeEnd)
 {
 
-	FRotator rot = (eyeStart - bulletEnd).Rotation();
-	//FVector calc = rot.Vector();
-
-
-
-	if (true)
+	FRotator rot = (bulletEnd - eyeStart).Rotation();
+	
+	if (rot.Yaw > 90 || rot.Yaw < -90)
 		return false;
 	return true;
 }
-
-
-
-//float angle = FVector::DotProduct(bulletEnd - bulletStart, eyeEnd - eyeStart);
-//float angle2 = FVector::PointPlaneDist(bulletEnd, eyeStart, eyeStart);
