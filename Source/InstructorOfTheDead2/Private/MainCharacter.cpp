@@ -36,6 +36,7 @@ AMainCharacter::AMainCharacter()
 
 	WeaponAttachSocketName = "GunSocket";
 	playerCanFire = true;
+	FireRate = .5f;
 }
 
 // Called when the game starts or when spawned
@@ -113,7 +114,7 @@ void AMainCharacter::Fire()
 			CurrentWeapon->Fire();
 		}
 
-		GetWorld()->GetTimerManager().SetTimer(FireDelay, this, &AMainCharacter::ResetFire, 1.0f, false);
+		GetWorld()->GetTimerManager().SetTimer(FireDelay, this, &AMainCharacter::ResetFire, FireRate, false);
 	}
 
 }

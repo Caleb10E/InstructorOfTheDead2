@@ -85,4 +85,7 @@ public:
 
 	FTimerHandle FireDelay;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Player")
+	float FireRate;
+
 };
