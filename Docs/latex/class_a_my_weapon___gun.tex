@@ -1,0 +1,109 @@
+\hypertarget{class_a_my_weapon___gun}{}\section{A\+My\+Weapon\+\_\+\+Gun Class Reference}
+\label{class_a_my_weapon___gun}\index{A\+My\+Weapon\+\_\+\+Gun@{A\+My\+Weapon\+\_\+\+Gun}}
+Inheritance diagram for A\+My\+Weapon\+\_\+\+Gun\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_a_my_weapon___gun}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_my_weapon___gun_a8b430c2ea96f507fa29e2eceb7ebc552}{Fire}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_my_weapon___gun_a8d4f24314bfe7d7f722f1f03a9b52936}{Play\+Fire\+Effects}} (F\+Vector Trace\+End)
+\item 
+\mbox{\Hypertarget{class_a_my_weapon___gun_a705560269295e26bb47af646ddee16bb}\label{class_a_my_weapon___gun_a705560269295e26bb47af646ddee16bb}} 
+void \mbox{\hyperlink{class_a_my_weapon___gun_a705560269295e26bb47af646ddee16bb}{Server\+Fire}} ()
+\begin{DoxyCompactList}\small\item\em Has a player \char`\"{}fire\char`\"{} from the server\textquotesingle{}s end and then replicate the action. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_my_weapon___gun_af37b774edf0e46530795e38cb55c69ae}\label{class_a_my_weapon___gun_af37b774edf0e46530795e38cb55c69ae}} 
+void \mbox{\hyperlink{class_a_my_weapon___gun_af37b774edf0e46530795e38cb55c69ae}{On\+\_\+\+Rep\+\_\+\+Hit\+Scan\+Trace}} ()
+\begin{DoxyCompactList}\small\item\em Sets \mbox{\hyperlink{class_a_my_weapon___gun_a63a32b90438b170a8b5b41a83051cb3e}{Hit\+Scan\+Trace()}} to replicate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_my_weapon___gun_a2a734edf94e9c1aa40194c60a6116c99}{Play\+Impact\+Effects}} (E\+Physical\+Surface Surface\+Type, F\+Vector Impact\+Point)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_a_my_weapon___gun_ae5cc40d0c60ca3a5120acf10a1b1f4c7}\label{class_a_my_weapon___gun_ae5cc40d0c60ca3a5120acf10a1b1f4c7}} 
+U\+Skeletal\+Mesh\+Component $\ast$ \mbox{\hyperlink{class_a_my_weapon___gun_ae5cc40d0c60ca3a5120acf10a1b1f4c7}{Mesh\+Comp}}
+\begin{DoxyCompactList}\small\item\em Pointer to wireframe. Used for skinning. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_my_weapon___gun_a8d5171dbf961d142e836c08c61042fd1}\label{class_a_my_weapon___gun_a8d5171dbf961d142e836c08c61042fd1}} 
+T\+Subclass\+Of$<$ U\+Damage\+Type $>$ \mbox{\hyperlink{class_a_my_weapon___gun_a8d5171dbf961d142e836c08c61042fd1}{Damage\+Type}}
+\begin{DoxyCompactList}\small\item\em Determines the damage type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_my_weapon___gun_a3be0763373c47e77d857658ad55a78b9}\label{class_a_my_weapon___gun_a3be0763373c47e77d857658ad55a78b9}} 
+F\+Name \mbox{\hyperlink{class_a_my_weapon___gun_a3be0763373c47e77d857658ad55a78b9}{Muzzle\+Socket\+Name}}
+\begin{DoxyCompactList}\small\item\em Reference to the endpoint of the gun object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_my_weapon___gun_a8c55f6a25191a005d54c60ab9fe2c416}\label{class_a_my_weapon___gun_a8c55f6a25191a005d54c60ab9fe2c416}} 
+F\+Name \mbox{\hyperlink{class_a_my_weapon___gun_a8c55f6a25191a005d54c60ab9fe2c416}{Tracer\+Target\+Name}}
+\begin{DoxyCompactList}\small\item\em Reference to the tracer object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_my_weapon___gun_a679469b189976f66e5c55f9fdeccb885}\label{class_a_my_weapon___gun_a679469b189976f66e5c55f9fdeccb885}} 
+U\+Particle\+System $\ast$ \mbox{\hyperlink{class_a_my_weapon___gun_a679469b189976f66e5c55f9fdeccb885}{Muzzle\+Effect}}
+\begin{DoxyCompactList}\small\item\em Handles Particle Effects for the gun\textquotesingle{}s muzzle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_my_weapon___gun_ac2f8ae09bfe4a45ffecd1152992b7bd1}\label{class_a_my_weapon___gun_ac2f8ae09bfe4a45ffecd1152992b7bd1}} 
+U\+Particle\+System $\ast$ \mbox{\hyperlink{class_a_my_weapon___gun_ac2f8ae09bfe4a45ffecd1152992b7bd1}{Default\+Impact\+Effect}}
+\begin{DoxyCompactList}\small\item\em Handles default particle effect for when a projectile imapcts an object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_my_weapon___gun_a54d0bc79091a1c6c1ff1024a504a913e}\label{class_a_my_weapon___gun_a54d0bc79091a1c6c1ff1024a504a913e}} 
+U\+Particle\+System $\ast$ \mbox{\hyperlink{class_a_my_weapon___gun_a54d0bc79091a1c6c1ff1024a504a913e}{Flesh\+Impact\+Effects}}
+\begin{DoxyCompactList}\small\item\em Handles default particle effect for when a projectile impacts a a player. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_my_weapon___gun_a14dd5df426696f79aa347bb870e55a8a}\label{class_a_my_weapon___gun_a14dd5df426696f79aa347bb870e55a8a}} 
+U\+Particle\+System $\ast$ \mbox{\hyperlink{class_a_my_weapon___gun_a14dd5df426696f79aa347bb870e55a8a}{Tracer\+Effect}}
+\begin{DoxyCompactList}\small\item\em Handles the particle effect for creating the \char`\"{}tracer\char`\"{} vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_my_weapon___gun_ac88147e1d8d4c2e0fcc4b99508151d95}\label{class_a_my_weapon___gun_ac88147e1d8d4c2e0fcc4b99508151d95}} 
+T\+Subclass\+Of$<$ U\+Camera\+Shake $>$ \mbox{\hyperlink{class_a_my_weapon___gun_ac88147e1d8d4c2e0fcc4b99508151d95}{Fire\+Cam\+Shake}}
+\begin{DoxyCompactList}\small\item\em Shakes the camera when a gun is fired. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_my_weapon___gun_a249e1fd79607e29492373ec47fdea572}\label{class_a_my_weapon___gun_a249e1fd79607e29492373ec47fdea572}} 
+float \mbox{\hyperlink{class_a_my_weapon___gun_a249e1fd79607e29492373ec47fdea572}{Base\+Damage}}
+\begin{DoxyCompactList}\small\item\em The default damage amount. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_a_my_weapon___gun_a63a32b90438b170a8b5b41a83051cb3e}\label{class_a_my_weapon___gun_a63a32b90438b170a8b5b41a83051cb3e}} 
+\mbox{\hyperlink{struct_f_hit_scan_trace}{F\+Hit\+Scan\+Trace}} \mbox{\hyperlink{class_a_my_weapon___gun_a63a32b90438b170a8b5b41a83051cb3e}{Hit\+Scan\+Trace}}
+\begin{DoxyCompactList}\small\item\em Stores the. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_my_weapon___gun_a8b430c2ea96f507fa29e2eceb7ebc552}\label{class_a_my_weapon___gun_a8b430c2ea96f507fa29e2eceb7ebc552}} 
+\index{A\+My\+Weapon\+\_\+\+Gun@{A\+My\+Weapon\+\_\+\+Gun}!Fire@{Fire}}
+\index{Fire@{Fire}!A\+My\+Weapon\+\_\+\+Gun@{A\+My\+Weapon\+\_\+\+Gun}}
+\subsubsection{\texorpdfstring{Fire()}{Fire()}}
+{\footnotesize\ttfamily void A\+My\+Weapon\+\_\+\+Gun\+::\+Fire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Fires the gun. Short circuits, if called on a client, and serverfire() is called instead. 
+
+Reimplemented in \mbox{\hyperlink{class_a_rocket_launcher_a32f4db5a70f3a9e6b8cf0d8c0e84f78b}{A\+Rocket\+Launcher}}.
+
+\mbox{\Hypertarget{class_a_my_weapon___gun_a8d4f24314bfe7d7f722f1f03a9b52936}\label{class_a_my_weapon___gun_a8d4f24314bfe7d7f722f1f03a9b52936}} 
+\index{A\+My\+Weapon\+\_\+\+Gun@{A\+My\+Weapon\+\_\+\+Gun}!Play\+Fire\+Effects@{Play\+Fire\+Effects}}
+\index{Play\+Fire\+Effects@{Play\+Fire\+Effects}!A\+My\+Weapon\+\_\+\+Gun@{A\+My\+Weapon\+\_\+\+Gun}}
+\subsubsection{\texorpdfstring{Play\+Fire\+Effects()}{PlayFireEffects()}}
+{\footnotesize\ttfamily void A\+My\+Weapon\+\_\+\+Gun\+::\+Play\+Fire\+Effects (\begin{DoxyParamCaption}\item[{F\+Vector}]{Trace\+End }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Generates a Fire Effect based on muzzle and tracer effects.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Trace\+End} & Used to draw the tracer effect if used \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_a_my_weapon___gun_a2a734edf94e9c1aa40194c60a6116c99}\label{class_a_my_weapon___gun_a2a734edf94e9c1aa40194c60a6116c99}} 
+\index{A\+My\+Weapon\+\_\+\+Gun@{A\+My\+Weapon\+\_\+\+Gun}!Play\+Impact\+Effects@{Play\+Impact\+Effects}}
+\index{Play\+Impact\+Effects@{Play\+Impact\+Effects}!A\+My\+Weapon\+\_\+\+Gun@{A\+My\+Weapon\+\_\+\+Gun}}
+\subsubsection{\texorpdfstring{Play\+Impact\+Effects()}{PlayImpactEffects()}}
+{\footnotesize\ttfamily void A\+My\+Weapon\+\_\+\+Gun\+::\+Play\+Impact\+Effects (\begin{DoxyParamCaption}\item[{E\+Physical\+Surface}]{Surface\+Type,  }\item[{F\+Vector}]{Impact\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Generates a Impact Effect based on the Surfacetype hit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Surface\+Type} & Indicates whether the surface is a player or non-\/player object \\
+\hline
+{\em Impact\+Point} & The location where the projectile hit \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Instructor\+Of\+The\+Dead2/My\+Weapon\+\_\+\+Gun.\+h\item 
+Source/\+Instructor\+Of\+The\+Dead2/My\+Weapon\+\_\+\+Gun.\+cpp\end{DoxyCompactItemize}
