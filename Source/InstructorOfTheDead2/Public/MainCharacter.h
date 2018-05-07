@@ -78,4 +78,11 @@ public:
 
 	
 	virtual FVector GetPawnViewLocation() const override;
+
+	bool playerCanFire;
+
+	void ResetFire();
+
+	FTimerHandle FireDelay;
+
 };

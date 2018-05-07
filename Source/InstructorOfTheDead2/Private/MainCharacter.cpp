@@ -35,6 +35,7 @@ AMainCharacter::AMainCharacter()
 	bCanBeDamaged = true;
 
 	WeaponAttachSocketName = "GunSocket";
+	playerCanFire = true;
 }
 
 // Called when the game starts or when spawned
@@ -104,9 +105,15 @@ void AMainCharacter::EndZoom()
 
 void AMainCharacter::Fire()
 {
-	if (CurrentWeapon)
+	if (playerCanFire)
 	{
+		playerCanFire = false;
+		if (CurrentWeapon)
+		{
 			CurrentWeapon->Fire();
+		}
+
+		GetWorld()->GetTimerManager().SetTimer(FireDelay, this, &AMainCharacter::ResetFire, 1.0f, false);
 	}
 
 }
@@ -147,6 +154,13 @@ FVector AMainCharacter::GetPawnViewLocation() const
 	}
 
 	return Super::GetPawnViewLocation();
+}
+
+void AMainCharacter::ResetFire()
+{
+	playerCanFire = true;
+
+	GetWorldTimerManager().ClearTimer(FireDelay);
 }
 
 void AMainCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
