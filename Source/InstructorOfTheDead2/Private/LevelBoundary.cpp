@@ -22,7 +22,7 @@ void ALevelBoundary::BeginPlay()
 
 }
 
-void ALevelBoundary::OnOverlapBegin(class AActor* OverlappedActor, class AActor* OtherActor)
+/*void ALevelBoundary::OnOverlapBegin(class AActor* OverlappedActor, class AActor* OtherActor)
 {
 	if (OtherActor && (OtherActor != this)) {
 		// print to screen using above defined method when actor enters trigger volume
@@ -32,14 +32,28 @@ void ALevelBoundary::OnOverlapBegin(class AActor* OverlappedActor, class AActor*
 		//OtherActor->HitBoundary();
 		OtherActor->SetActorLocation(Respawn);
 	}
+}*/
+
+void ALevelBoundary::OnOverlapBegin(class AActor* OverlappedActor, class AActor* OtherActor)
+{
+	if (OtherActor->GetClass()->IsChildOf(AMainCharacter::StaticClass()))
+	{
+		// print to screen using above defined method when actor enters trigger volume
+		print("Character");
+		printFString("Other Actor = %s", *OtherActor->GetName());
+		//OtherActor->TakeDamage(1, FDamageEvent(), OverlappedActor->GetInstigatorController(), OverlappedActor);
+		//OtherActor->HitBoundary();
+		OtherActor->SetActorLocation(Respawn);
+	}
+
 }
 
 void ALevelBoundary::OnOverlapEnd(class AActor* OverlappedActor, class AActor* OtherActor)
 {
 	if (OtherActor && (OtherActor != this)) {
 		// print to screen using above defined method when actor leaves trigger volume
-		print("Overlap Ended");
-		printFString("%s has left the Trigger Volume", *OtherActor->GetName());
+		//print("Overlap Ended");
+		//printFString("%s has left the Trigger Volume", *OtherActor->GetName());
 	}
 }
 

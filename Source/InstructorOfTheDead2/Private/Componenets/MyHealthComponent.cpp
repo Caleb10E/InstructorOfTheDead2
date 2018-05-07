@@ -6,7 +6,8 @@
 // Sets default values for this component's properties
 UMyHealthComponent::UMyHealthComponent()
 {
-	DefaultHealth = 0;
+	DefaultHealth = 100;
+	DefaultLives = 5;
 }
 
 
@@ -21,8 +22,11 @@ void UMyHealthComponent::BeginPlay()
 	{
 		MyOwner->OnTakeAnyDamage.AddDynamic(this, &UMyHealthComponent::HandleTakeAnyDamage);
 	}
+
+	
 	
 	Health = DefaultHealth;
+	Lives = DefaultLives;
 }
 
 void UMyHealthComponent::HandleTakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
